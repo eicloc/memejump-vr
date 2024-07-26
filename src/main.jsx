@@ -4,12 +4,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 
 import BottomNav from "./components/bottom-nav";
+import GamePage from "./pages/game";
 import HomePage from "./pages/home";
 import FriendPage from "./pages/friend";
 import EarnPage from "./pages/earn";
 import SkinPage from "./pages/skin";
 import AirdropPage from "./pages/airdrop";
 import ErrorPage from "./error-page";
+import LoadingScreen from "./components/loading-screen";
+import NewBie from "./pages/newbie";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +41,18 @@ const router = createBrowserRouter([
         element: <AirdropPage />,
       },
     ],
+  },
+  {
+    path: "/game",
+    element: <GamePage />,
+  },
+  {
+    path: "/loading",
+    element: <LoadingScreen />,
+  },
+  {
+    path: "/newbie",
+    element: <NewBie />,
   },
 ]);
 
